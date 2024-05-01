@@ -11,7 +11,7 @@ app.get("/blog", (req, res) => {
 });
 
 app.get("/perfil/opcoes", (req, res) => {
-    res.send("Aqui você pode editar seu perfil");
+    res.send("<h1>Aqui você pode editar seu perfil</h1>");
 });
 
 
