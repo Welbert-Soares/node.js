@@ -17,7 +17,13 @@ app.get("/blog/:artigo?", (req, res) => {
 });
 
 app.get("/perfil/opcoes", (req, res) => {
-    res.send("<h1>Aqui você pode editar seu perfil</h1>");
+    let perfil = req.query["perfil"];
+
+    if (perfil) {
+        res.send(perfil);
+    } else {
+        res.send("Nenhum perfil informado");
+    }
 });
 
 app.get("/ola/:nome/:empresa", (req, res) => {
